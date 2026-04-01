@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadania JavaScript</title>
+</head>
+<body>
+
+<h1>Wybierz zadanie</h1>
+
+<button onclick="zad1()">1. Suma trzech liczb</button><br><br>
+<button onclick="zad2()">2. Średnia trzech liczb</button><br><br>
+<button onclick="zad3()">3. Suma, różnica, iloczyn</button><br><br>
+<button onclick="zad4()">4. Pierwiastek</button><br><br>
+<button onclick="zad5()">5. Pole kwadratu</button><br><br>
+<button onclick="zad6()">6. Pole prostopadłościanu</button><br><br>
+<button onclick="zad7()">7. Koło (pole i obwód)</button><br><br>
+<button onclick="zad8()">8. Koszt 360 km</button><br><br>
+<button onclick="zad9()">9. Koszt przejazdu</button><br><br>
+<button onclick="zad10()">10. Lokata</button><br><br>
+
+<script>
+function zad1() {
+    let a = Number(prompt("Podaj pierwszą liczbę:"));
+    let b = Number(prompt("Podaj drugą liczbę:"));
+    let c = Number(prompt("Podaj trzecią liczbę:"));
+    alert("Suma: " + (a + b + c));
+}
+
+function zad2() {
+    let a = Number(prompt("Podaj pierwszą liczbę:"));
+    let b = Number(prompt("Podaj drugą liczbę:"));
+    let c = Number(prompt("Podaj trzecią liczbę:"));
+    alert("Średnia: " + ((a + b + c) / 3));
+}
+
+function zad3() {
+    let a = Number(prompt("Podaj pierwszą liczbę:"));
+    let b = Number(prompt("Podaj drugą liczbę:"));
+    alert("Suma: " + (a + b) + 
+          "\nRóżnica: " + (a - b) + 
+          "\nIloczyn: " + (a * b));
+}
+
+function zad4() {
+    let x = Number(prompt("Podaj liczbę:"));
+    alert("Pierwiastek: " + Math.sqrt(x));
+}
+
+function zad5() {
+    let a = Number(prompt("Podaj bok:"));
+    alert("Pole kwadratu: " + (a * a));
+}
+
+function zad6() {
+    let a = Number(prompt("Długość:"));
+    let b = Number(prompt("Szerokość:"));
+    let c = Number(prompt("Wysokość:"));
+    let pole = 2 * (a*b + a*c + b*c);
+    alert("Pole prostopadłościanu: " + pole);
+}
+
+function zad7() {
+    let r = Number(prompt("Promień:"));
+    let pole = Math.PI * r * r;
+    let obwod = 2 * Math.PI * r;
+    alert("Pole: " + pole + "\nObwód: " + obwod);
+}
+
+function zad8() {
+    let cena = Number(prompt("Cena benzyny:"));
+    let koszt = (8 / 100 * 360) * cena;
+    alert("Koszt przejazdu: " + koszt);
+}
+
+function zad9() {
+    let cena = Number(prompt("Cena benzyny:"));
+    let dystans = Number(prompt("Długość trasy:"));
+    let spalanie = Number(prompt("Spalanie (l/100km):"));
+    let koszt = (spalanie / 100 * dystans) * cena;
+    alert("Koszt przejazdu: " + koszt);
+}
+
+function zad10() {
+    let kwota = Number(prompt("Kwota lokaty:"));
+    let zysk = kwota * 0.08 * (1 - 0.19);
+    alert("Zysk netto: " + zysk);
+}
+</script>
+
+</body>
+</html>
